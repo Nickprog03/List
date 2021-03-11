@@ -8,23 +8,26 @@ namespace List
     {
         static void Main(string[] args)
         {
-            
             DoublyLinkedList<int> list = new DoublyLinkedList<int>();
             list.Add(1);
             list.Add(2);
             list.Add(3);
+            list.Add(4);
+            list.Add(5);
+            list.Add(9);
+            list.Add(10);
+            list.Add(99);
             foreach (var item in list)
             {
-                Console.WriteLine(item);
+                Console.WriteLine("Данный список: " + item);
             }
 
             foreach (var item in list.BackEnumerator())
             {
-                Console.WriteLine(item);
+                Console.WriteLine("Обратный список: " + item);
             }
         }
     }
-
 
     public class DoublyNode<T>
     {
@@ -36,8 +39,6 @@ namespace List
         public DoublyNode<T> Previous { get; set; }
         public DoublyNode<T> Next { get; set; }
     }
-
-
 
     public class DoublyLinkedList<T> : IEnumerable<T>
     {
