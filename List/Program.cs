@@ -16,7 +16,9 @@ namespace List
             list.Add(5);
             list.Add(9);
             list.Add(10);
+            list.Add(25);
             list.Add(99);
+            list.Add(101);
             foreach (var item in list)
             {
                 Console.WriteLine("Данный список: " + item);
